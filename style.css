@@ -1,0 +1,180 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#titulo{
+    background-color: #114358;
+    padding: 30px;
+    color: white;
+}
+
+.subtitulo{
+    background-color: #F2AA1F;
+    padding: 12px 18px 12px 18px;
+    border-radius: 50px;
+    width: 38%;
+    text-align: center;
+}
+
+.subInfoPer{
+    width: 100%;
+}
+
+section{
+    background-color: #F1ECE7;
+    padding: 25px;
+}
+
+.divInfoP{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 5% 0% 5% 5%;
+}
+
+.datos{
+    display: flex;
+    margin-top: 5%;
+}
+
+.datos strong {
+    padding-right: 3%;
+}
+
+img{
+    max-width: 100%;
+}
+
+.introduccion{
+    font-size: 20px;
+    margin: 0;
+}
+
+li{
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td{
+    border: 1px solid #090909;
+    padding: 8px;
+}
+
+th{
+    background-color: #114358;
+    color: white;
+}
+
+form{
+    margin: 4% 20% 4% 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+#textarea{
+    height: 100px;
+    grid-column: 1/4;
+    grid-row: inherit;
+}
+
+textarea{
+    margin: 1% 0% 2% 0%;
+    height: 25px;
+    padding: 1% 0% 0% 1%;
+    font-size: 15px;
+}
+
+.asunto{
+    grid-column: 1/4;
+    grid-row: 2;
+    height: 40px;
+    padding-left: 1%;
+    font-size: 15px;
+}
+
+input[type="email"]{
+    grid-column: 2/4;
+    grid-row: 1;
+    height: 40px;
+    padding-left: 2%;
+    font-size: 15px;
+}
+
+input[type="text"]:not(.asunto):not(#textarea){
+    grid-column: 1/2;
+    grid-row: 1;
+    height: 40px;
+    padding-left: 2%;
+    font-size: 15px;
+}
+
+button{
+    background-color: #114358;
+    color: white;
+    border: 2px solid #114358;
+    padding: 10px;
+    grid-column: 1/4;
+    font-size: 15px;
+}
+
+button:hover{
+    background-color: #090909;
+    border-color: #090909;
+}
+
+footer{
+    background-color: #090909;
+    color: #F1ECE7;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 780px) {
+    .subtitulo, .introduccion, li{
+        font-size: 15px;
+    }
+
+    .subInfoPer{
+        width: 100%;
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        margin: 4% 10% 4% 10%;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .divInfoP{
+        gap: 30px;
+    }
+
+    input[type="text"]:not(.asunto):not(#textarea), input[type="email"], .asunto{
+        grid-column: 1/4;
+        grid-row: inherit;
+    }
+
+    form{
+        margin: 4% 0% 4% 0%;
+    }
+}
